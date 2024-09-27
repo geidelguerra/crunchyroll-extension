@@ -1,20 +1,10 @@
-DEBUG = true
-
-log = function (...data) {
-  if (DEBUG) {
-    console.log(...data);
-  }
-}
-
-log('Crunchyroll Enhancer')
-
-let skipButton = null;
+console.log('Crunchyroll Enhancer')
 
 setInterval(function () {
-  skipButton = document.querySelector('[data-testid="skipButton"] > div');
+  const skipButton = document.querySelector('[data-testid="skipButton"] > div');
 
   if (skipButton) {
-    log('Skip button found. Clicking it!');
+    console.log('Skip button found. Clicking it!');
     skipButton.click();
   }
 }, 1000)
